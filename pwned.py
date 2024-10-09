@@ -12,3 +12,8 @@ def check_password_pwned(password) :
 first_5_chars = sha1_hash [:5]
 rest_of_hash = sha1_hash [5:]
 
+url = f"https://api.pwnedpasswords.com/range/{first_5_chars}"
+#url =: This creates a variable named url to store the API endpoint (a web address that the program will send a request to).
+
+    # Step 3: Make a request to the HIBP API
+response = requests.get(url)
